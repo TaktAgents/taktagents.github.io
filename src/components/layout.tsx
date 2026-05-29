@@ -100,12 +100,12 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
 
           <p className="text-xs text-text-tertiary text-center md:text-left">
-            Takt is open-source. Local-first. No cloud account required. built for macOS power users.
+            Takt is open-source. Local-first. No cloud account required. Built for macOS power users.
           </p>
 
           <div className="flex gap-4 text-xs font-semibold text-text-secondary">
-            <a href="https://github.com/TaktAgents/takt" target="_blank" rel="noopener noreferrer" className="hover:text-text-primary transition-colors">GitHub</a>
-            <a href="#" className="hover:text-text-primary transition-colors">Documentation</a>
+            <a href="https://github.com/TaktAgents" target="_blank" rel="noopener noreferrer" className="hover:text-text-primary transition-colors">GitHub</a>
+            <a href="/docs" className="hover:text-text-primary transition-colors">Documentation</a>
             <a href="#" className="hover:text-text-primary transition-colors">Privacy Policy</a>
           </div>
         </div>

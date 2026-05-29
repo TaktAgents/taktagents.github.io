@@ -43,7 +43,7 @@ export const Cta: React.FC = () => {
           </a>
 
           <a
-            href="#"
+            href="/docs"
             className="w-full sm:w-auto inline-flex h-12 items-center justify-center gap-2 rounded-brand-md border border-border-default bg-bg-panel px-6 text-base font-semibold text-text-primary hover:bg-bg-panelAlt transition-all duration-150"
           >
             <BookOpen className="w-5 h-5" /> Read the docs
@@ -52,7 +52,7 @@ export const Cta: React.FC = () => {
 
         {/* Footer Note */}
         <p className="text-xs text-text-tertiary pt-6 max-w-xl mx-auto">
-          Takt Agents is open-source and built for macOS power users who live in the terminal, menu bar utilities, and AI coding workflows.
+          Takt Agents is open-source and built for macOS power users who live in terminal, menu bar utilities, and AI coding workflows.
         </p>
 
       </div>

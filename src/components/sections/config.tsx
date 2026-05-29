@@ -16,6 +16,76 @@ schedule:
 execution_mode: interactive_tty
 timeout_seconds: 30`
 
+  const highlightYaml = (yaml: string) => {
+    return yaml.split("\n").map((line, idx) => {
+      if (!line.trim()) return <div key={idx}>&nbsp;</div>
+
+      // Вычисляем отступ
+      const indentMatch = line.match(/^(\s*)/)
+      const indent = indentMatch ? indentMatch[1] : ""
+      const content = line.substring(indent.length)
+
+      // Если это элемент массива: "- ..."
+      if (content.startsWith("- ")) {
+        const rest = content.substring(2)
+        // Если элемент массива в кавычках (например, - "0 8 * * *")
+        if ((rest.startsWith('"') && rest.endsWith('"')) || (rest.startsWith("'") && rest.endsWith("'"))) {
+          return (
+            <div key={idx} className="whitespace-pre">
+              {indent}
+              <span className="text-text-tertiary mr-1.5">-</span>
+              <span className="text-status-success">{rest}</span>
+            </div>
+          )
+        }
+        // Если обычный текст (например, - --dangerously-skip-permissions)
+        return (
+          <div key={idx} className="whitespace-pre">
+            {indent}
+            <span className="text-text-tertiary mr-1.5">-</span>
+            <span className="text-text-secondary">{rest}</span>
+          </div>
+        )
+      }
+
+      // Ищем двоеточие
+      const colonIdx = content.indexOf(":")
+      if (colonIdx !== -1) {
+        const key = content.substring(0, colonIdx)
+        const val = content.substring(colonIdx + 1)
+        const trimmedVal = val.trim()
+
+        let valElement: React.ReactNode = trimmedVal
+
+        if (trimmedVal === "true" || trimmedVal === "false") {
+          valElement = <span className="text-status-success font-semibold">{trimmedVal}</span>
+        } else if (!isNaN(Number(trimmedVal)) && trimmedVal !== "") {
+          valElement = <span className="text-status-warning font-semibold">{trimmedVal}</span>
+        } else if ((trimmedVal.startsWith('"') && trimmedVal.endsWith('"')) || (trimmedVal.startsWith("'") && trimmedVal.endsWith("'"))) {
+          valElement = <span className="text-status-success">{trimmedVal}</span>
+        } else if (trimmedVal) {
+          valElement = <span className="text-text-secondary">{trimmedVal}</span>
+        }
+
+        return (
+          <div key={idx} className="whitespace-pre">
+            {indent}
+            <span className="text-brand-pulse font-semibold">{key}</span>
+            <span className="text-text-primary">:</span>
+            {trimmedVal && <span className="text-text-tertiary">&nbsp;</span>}
+            {valElement}
+          </div>
+        )
+      }
+
+      return (
+        <div key={idx} className="whitespace-pre">
+          {line}
+        </div>
+      )
+    })
+  }
+
   return (
     <section id="config" className="py-16 md:py-24 border-t border-border-default/50 bg-bg-canvas transition-colors duration-200">
       <div className="container max-w-6xl mx-auto px-4 sm:px-6">
@@ -23,7 +93,7 @@ timeout_seconds: 30`
           
           {/* YAML Config Block */}
           <div className="lg:col-span-7 lg:order-last">
-            <div className="rounded-brand-lg border border-border-default bg-brand-navy shadow-2xl overflow-hidden font-mono text-xs">
+            <div className="rounded-brand-lg border border-border-default bg-[#080b11] shadow-2xl overflow-hidden font-mono text-xs">
               
               {/* Header */}
               <div className="flex items-center gap-1.5 px-4 py-3 bg-bg-panelAlt/30 border-b border-border-default/50">
@@ -33,7 +103,7 @@ timeout_seconds: 30`
 
               {/* YAML Body */}
               <pre className="p-5 overflow-x-auto text-brand-onDark bg-[#080b11] leading-relaxed select-all">
-                <code>{yamlConfig}</code>
+                <code>{highlightYaml(yamlConfig)}</code>
               </pre>
 
             </div>
