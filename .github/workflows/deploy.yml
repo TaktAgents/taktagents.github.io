@@ -38,16 +38,14 @@ jobs:
 
       - name: Install Dependencies
         run: bun install
-        working-directory: landing
 
       - name: Build Site
         run: bun run build
-        working-directory: landing
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: landing/dist
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
