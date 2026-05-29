@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 10% 95%;
+    --foreground: 220 35% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 35% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 35% 7%;
+
+    --primary: 223 100% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 216 12% 95%;
+    --secondary-foreground: 220 35% 7%;
+
+    --muted: 216 12% 95%;
+    --muted-foreground: 217 11% 40%;
+
+    --accent: 216 12% 95%;
+    --accent-foreground: 220 35% 7%;
+
+    --destructive: 0 72% 36%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 14% 90%;
+    --input: 216 14% 90%;
+    --ring: 223 100% 59%;
+
+    --radius: 0.5rem;
+
+    /* Brand Tokens (Light) */
+    --brand-pulse: 223 100% 59%; /* #2F6BFF */
+    --brand-pulse-hover: 223 70% 49%; /* #2657D6 */
+    --brand-navy: 220 35% 7%; /* #0B0F17 */
+    --brand-graphite: 216 31% 15%; /* #1A2332 */
+    --brand-ink: 220 35% 7%;
+    --brand-on-dark: 210 29% 93%;
+
+    --bg-canvas: 220 10% 95%; /* #F5F6F8 */
+    --bg-panel: 0 0% 100%; /* #FFFFFF */
+    --bg-panel-alt: 216 12% 95%; /* #F0F2F5 */
+    --bg-elevated: 0 0% 100%; /* #FFFFFF */
+
+    --border-default: 216 14% 90%; /* #E2E5EA */
+    --border-strong: 219 14% 80%; /* #C3C9D4 */
+
+    --text-primary: 220 35% 7%; /* #0B0F17 */
+    --text-secondary: 217 11% 40%; /* #5B6472 */
+    --text-tertiary: 218 14% 65%; /* #9AA2B1 */
+    --text-on-accent: 0 0% 100%; /* #FFFFFF */
+
+    --status-success: 142 76% 36%; /* #16A34A */
+    --status-running: 223 100% 59%; /* #2F6BFF */
+    --status-warning: 35 92% 44%; /* #D97706 */
+    --status-error: 0 72% 51%; /* #DC2626 */
+    --status-skipped: 45 93% 41%; /* #CA8A04 */
+    --status-blocked: 0 72% 51%;
+    --status-timeout: 28 80% 44%; /* #B45309 */
+    --status-idle: 220 9% 46%; /* #6B7280 */
+    --status-scheduled: 199 89% 48%; /* #0EA5E9 */
+    --status-paused: 220 9% 46%;
+
+    --glow-color: rgba(47, 107, 255, 0.15);
+  }
+
+  /* Default to Dark Mode because Takt has a premium dark elegant macOS aesthetic */
+  .dark, :root {
+    --background: 220 35% 7%; /* #0B0F17 */
+    --foreground: 210 29% 93%; /* #E6EDF3 */
+
+    --card: 218 33% 11%; /* #131A26 */
+    --card-foreground: 210 29% 93%;
+
+    --popover: 217 31% 17%; /* #1E2839 */
+    --popover-foreground: 210 29% 93%;
+
+    --primary: 222 100% 65%; /* #4D82FF */
+    --primary-foreground: 220 35% 7%;
+
+    --secondary: 216 31% 15%; /* #1A2332 */
+    --secondary-foreground: 210 29% 93%;
+
+    --muted: 216 31% 15%;
+    --muted-foreground: 218 15% 60%;
+
+    --accent: 216 31% 15%;
+    --accent-foreground: 210 29% 93%;
+
+    --destructive: 0 84% 60%; /* #EF4444 */
+    --destructive-foreground: 210 29% 93%;
+
+    --border: 219 33% 21%; /* #243047 */
+    --input: 219 33% 21%;
+    --ring: 222 100% 65%;
+
+    /* Brand Tokens (Dark) */
+    --brand-pulse: 222 100% 65%; /* #4D82FF */
+    --brand-pulse-hover: 222 100% 71%; /* #6B97FF */
+    --brand-navy: 220 35% 7%; /* #0B0F17 */
+    --brand-graphite: 216 31% 15%; /* #1A2332 */
+    --brand-ink: 220 35% 7%;
+    --brand-on-dark: 210 29% 93%;
+
+    --bg-canvas: 220 35% 7%; /* #0B0F17 */
+    --bg-panel: 218 33% 11%; /* #131A26 */
+    --bg-panel-alt: 216 31% 15%; /* #1A2332 */
+    --bg-elevated: 217 31% 17%; /* #1E2839 */
+
+    --border-default: 219 33% 21%; /* #243047 */
+    --border-strong: 219 28% 28%; /* #33415C */
+
+    --text-primary: 210 29% 93%; /* #E6EDF3 */
+    --text-secondary: 218 15% 60%; /* #8B95A8 */
+    --text-tertiary: 219 13% 41%; /* #5C6678 */
+    --text-on-accent: 220 35% 7%; /* #0B0F17 */
+
+    --status-success: 142 70% 45%; /* #22C55E */
+    --status-running: 222 100% 65%; /* #4D82FF */
+    --status-warning: 38 92% 50%; /* #F59E0B */
+    --status-error: 0 84% 60%; /* #EF4444 */
+    --status-skipped: 45 93% 47%; /* #EAB308 */
+    --status-blocked: 0 84% 60%;
+    --status-timeout: 24 95% 61%; /* #FB923C */
+    --status-idle: 218 15% 60%;
+    --status-scheduled: 199 89% 60%; /* #38BDF8 */
+    --status-paused: 218 15% 60%;
+
+    --glow-color: rgba(77, 130, 255, 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+}
+
+/* Glassmorphism custom classes */
+.glass-panel {
+  background: rgba(19, 26, 38, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(36, 48, 71, 0.5);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 229, 234, 0.8);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg-panelAlt;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border-strong rounded-full transition-colors;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--brand-pulse));
+}
