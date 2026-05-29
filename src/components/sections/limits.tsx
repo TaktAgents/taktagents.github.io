@@ -32,7 +32,7 @@ export const Limits: React.FC = () => {
 
           {/* Visual: Progress Rings Simulation */}
           <div className="lg:col-span-7">
-            <div className="rounded-brand-lg border border-border-default bg-brand-graphite p-6 glass-panel space-y-6">
+            <div className="rounded-brand-lg border border-border-default p-6 glass-panel space-y-6">
               
               <div className="flex items-center justify-between border-b border-border-default/40 pb-3">
                 <span className="text-xs uppercase tracking-wider font-bold text-text-secondary">CodexBar Limits Provider</span>
@@ -43,7 +43,7 @@ export const Limits: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 
                 {/* Codex Ring Card */}
-                <div className="bg-brand-navy/60 border border-border-default/80 rounded-brand-md p-4 flex items-center gap-4">
+                <div className="bg-bg-panelAlt/60 border border-border-default/80 rounded-brand-md p-4 flex items-center gap-4">
                   
                   {/* Styled Circle representing progress */}
                   <div className="relative w-16 h-16 flex-shrink-0 flex items-center justify-center">
@@ -76,7 +76,7 @@ export const Limits: React.FC = () => {
                 </div>
 
                 {/* Claude Code Ring Card */}
-                <div className="bg-brand-navy/60 border border-border-default/80 rounded-brand-md p-4 flex items-center gap-4">
+                <div className="bg-bg-panelAlt/60 border border-border-default/80 rounded-brand-md p-4 flex items-center gap-4">
                   
                   {/* Styled Circle representing progress */}
                   <div className="relative w-16 h-16 flex-shrink-0 flex items-center justify-center">

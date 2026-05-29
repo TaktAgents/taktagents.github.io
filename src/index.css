@@ -72,7 +72,7 @@
   }
 
   /* Default to Dark Mode because Takt has a premium dark elegant macOS aesthetic */
-  .dark, :root {
+  .dark {
     --background: 220 35% 7%; /* #0B0F17 */
     --foreground: 210 29% 93%; /* #E6EDF3 */
 
@@ -150,19 +150,18 @@
   }
 }
 
-/* Glassmorphism custom classes */
+/* Glassmorphism custom classes - responsive to themes */
 .glass-panel {
-  background: rgba(19, 26, 38, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(36, 48, 71, 0.5);
-}
-
-.glass-panel-light {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(226, 229, 234, 0.8);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.dark .glass-panel {
+  background: rgba(19, 26, 38, 0.7);
+  border: 1px solid rgba(36, 48, 71, 0.5);
 }
 
 /* Custom scrollbars */
@@ -181,4 +180,15 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--brand-pulse));
+}
+
+/* Respect user prefers-reduced-motion setting */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
 }

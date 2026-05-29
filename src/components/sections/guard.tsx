@@ -9,7 +9,7 @@ export const Guard: React.FC = () => {
           
           {/* Visual card */}
           <div className="lg:col-span-7 lg:order-last">
-            <div className="rounded-brand-lg border border-border-default bg-brand-graphite p-6 glass-panel space-y-4">
+            <div className="rounded-brand-lg border border-border-default p-6 glass-panel space-y-4">
               
               <div className="flex items-center justify-between border-b border-border-default/40 pb-3">
                 <span className="text-xs uppercase tracking-wider font-bold text-text-secondary">Network Guard Panel</span>
@@ -17,7 +17,7 @@ export const Guard: React.FC = () => {
               </div>
 
               {/* Guard: Allowed Simulation */}
-              <div className="bg-brand-navy/60 border border-status-success/30 rounded-brand-md p-4 space-y-2 text-xs">
+              <div className="bg-bg-panelAlt/60 border border-status-success/30 rounded-brand-md p-4 space-y-2 text-xs">
                 <div className="flex justify-between items-center text-[10px] uppercase font-bold text-status-success">
                   <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5" /> Guard: Allowed</span>
                   <span>100% Secure</span>
@@ -30,7 +30,7 @@ export const Guard: React.FC = () => {
               </div>
 
               {/* Guard: Blocked Simulation */}
-              <div className="bg-brand-navy/60 border border-status-error/30 rounded-brand-md p-4 space-y-2 text-xs">
+              <div className="bg-bg-panelAlt/60 border border-status-error/30 rounded-brand-md p-4 space-y-2 text-xs">
                 <div className="flex justify-between items-center text-[10px] uppercase font-bold text-status-error">
                   <span className="flex items-center gap-1"><ShieldAlert className="w-3.5 h-3.5" /> Guard: Skipped / Blocked</span>
                   <span>IP Filter Active</span>

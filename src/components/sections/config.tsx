@@ -33,7 +33,7 @@ timeout_seconds: 30`
           return (
             <div key={idx} className="whitespace-pre">
               {indent}
-              <span className="text-text-tertiary mr-1.5">-</span>
+              <span className="text-slate-400 mr-1.5">-</span>
               <span className="text-status-success">{rest}</span>
             </div>
           )
@@ -42,8 +42,8 @@ timeout_seconds: 30`
         return (
           <div key={idx} className="whitespace-pre">
             {indent}
-            <span className="text-text-tertiary mr-1.5">-</span>
-            <span className="text-text-secondary">{rest}</span>
+            <span className="text-slate-400 mr-1.5">-</span>
+            <span className="text-slate-300">{rest}</span>
           </div>
         )
       }
@@ -64,15 +64,15 @@ timeout_seconds: 30`
         } else if ((trimmedVal.startsWith('"') && trimmedVal.endsWith('"')) || (trimmedVal.startsWith("'") && trimmedVal.endsWith("'"))) {
           valElement = <span className="text-status-success">{trimmedVal}</span>
         } else if (trimmedVal) {
-          valElement = <span className="text-text-secondary">{trimmedVal}</span>
+          valElement = <span className="text-slate-300">{trimmedVal}</span>
         }
 
         return (
           <div key={idx} className="whitespace-pre">
             {indent}
             <span className="text-brand-pulse font-semibold">{key}</span>
-            <span className="text-text-primary">:</span>
-            {trimmedVal && <span className="text-text-tertiary">&nbsp;</span>}
+            <span className="text-slate-300">:</span>
+            {trimmedVal && <span className="text-slate-400">&nbsp;</span>}
             {valElement}
           </div>
         )

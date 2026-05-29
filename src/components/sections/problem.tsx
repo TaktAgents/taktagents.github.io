@@ -29,7 +29,7 @@ export const Problem: React.FC = () => {
 
           {/* Visual: Timeline comparison */}
           <div className="lg:col-span-7">
-            <div className="rounded-brand-lg border border-border-default bg-brand-graphite p-6 glass-panel space-y-6">
+            <div className="rounded-brand-lg border border-border-default p-6 glass-panel space-y-6">
               
               {/* BEFORE */}
               <div className="space-y-3">
@@ -38,7 +38,7 @@ export const Problem: React.FC = () => {
                   <span className="text-xs uppercase tracking-wider font-bold">Before: Random Start</span>
                 </div>
                 
-                <div className="bg-brand-navy/60 border border-border-default/50 rounded-brand-md p-4 font-mono text-xs space-y-2 text-text-secondary">
+                <div className="bg-bg-panelAlt/60 border border-border-default/50 rounded-brand-md p-4 font-mono text-xs space-y-2 text-text-secondary">
                   <div className="flex justify-between items-center border-b border-border-default/20 pb-2">
                     <span className="text-text-primary">10:37</span>
                     <span className="text-status-error bg-status-error/10 px-2 py-0.5 rounded-full border border-status-error/20 font-semibold">Accidental Start</span>
@@ -66,7 +66,7 @@ export const Problem: React.FC = () => {
                   <span className="text-xs uppercase tracking-wider font-bold">After: Takt in Rhythm</span>
                 </div>
 
-                <div className="bg-brand-navy/80 border border-brand-pulse/30 rounded-brand-md p-4 font-mono text-xs space-y-2 text-text-secondary">
+                <div className="bg-bg-panelAlt/80 border border-brand-pulse/30 rounded-brand-md p-4 font-mono text-xs space-y-2 text-text-secondary">
                   <div className="flex justify-between items-center border-b border-border-default/20 pb-2">
                     <span className="text-brand-pulse font-bold">08:00</span>
                     <span className="text-status-success bg-status-success/10 px-2 py-0.5 rounded-full border border-status-success/20 font-semibold">Morning Work</span>

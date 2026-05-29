@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
           <div className="absolute inset-0 bg-brand-pulse/10 rounded-brand-lg blur-2xl -z-10 pointer-events-none" />
 
           {/* Interactive macOS Mockup Window */}
-          <div className="rounded-brand-lg border border-border-default/80 bg-brand-graphite/90 shadow-2xl overflow-hidden glass-panel text-left">
+          <div className="rounded-brand-lg border border-border-default/80 shadow-2xl overflow-hidden glass-panel text-left">
             {/* macOS Window Controls */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-border-default/50 bg-bg-canvas/50">
               <div className="flex items-center gap-2">
@@ -181,7 +181,7 @@ export const Hero: React.FC = () => {
                     <span className="text-[10px] uppercase tracking-wider font-semibold text-text-tertiary font-mono">Terminal Output</span>
                   </div>
                   <div className="bg-brand-navy p-3 rounded-brand-sm border border-border-default font-mono text-[11px] text-brand-onDark space-y-1">
-                    <p className="text-text-tertiary">$ takt status</p>
+                    <p className="text-slate-400">$ takt status</p>
                     <p><span className="text-status-success">✓</span> Scheduler: Active</p>
                     <p><span className="text-brand-pulse">●</span> Active agents: claude (next: 18:00), codex (running...)</p>
                   </div>
