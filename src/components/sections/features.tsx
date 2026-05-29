@@ -34,7 +34,7 @@ export const Features: React.FC = () => {
     {
       icon: <Calendar className="w-5 h-5" />,
       title: "Scheduled Agent Runs",
-      description: "Run any CLI agent at configured times with a tiny prompt like \"ok\" to establish quota windows automatically.",
+      description: 'Run any CLI agent at configured times with a tiny prompt like "ok".',
       accentColor: "bg-brand-pulse",
     },
     {
@@ -46,25 +46,25 @@ export const Features: React.FC = () => {
     {
       icon: <Shield className="w-5 h-5" />,
       title: "Network Guard",
-      description: "Verify public IP before launch. If it matches a blocked list, Takt skips the run before the command starts.",
+      description: "Check the current public outgoing IP before launch. If it matches your blocked list, Takt skips the run before the agent process starts.",
       accentColor: "bg-status-warning",
     },
     {
       icon: <Terminal className="w-5 h-5" />,
       title: "CLI Control",
-      description: "Trigger, inspect, pause, resume, and debug Takt from terminal scripts, shell automations, or developer tools.",
+      description: "Trigger, inspect, pause, resume, and debug Takt from terminal scripts or developer tools.",
       accentColor: "bg-brand-pulse",
     },
     {
       icon: <Gauge className="w-5 h-5" />,
       title: "Limits Provider Integration",
-      description: "Optionally read usage windows from CodexBar, so Takt can avoid launching agents when limits are fully exhausted.",
+      description: "Optionally read usage windows from CodexBar when available, so Takt can avoid launching agents when limits are exhausted.",
       accentColor: "bg-status-error",
     },
     {
       icon: <Database className="w-5 h-5" />,
       title: "Local-first Logs",
-      description: "Every run, skip, timeout, and failure is logged locally for clean developer auditing and troubleshooting.",
+      description: "Every run, skip, timeout, and failure is logged locally for debugging.",
       accentColor: "bg-text-secondary",
     },
   ]
