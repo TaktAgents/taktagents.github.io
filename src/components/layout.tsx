@@ -105,7 +105,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           <div className="flex gap-4 text-xs font-semibold text-text-secondary">
             <a href="https://github.com/TaktAgents" target="_blank" rel="noopener noreferrer" className="hover:text-text-primary transition-colors">GitHub</a>
-            <a href="/docs" className="hover:text-text-primary transition-colors">Documentation</a>
+            <a href="https://taktagents.github.io/docs/" className="hover:text-text-primary transition-colors">Documentation</a>
             <a href="#" className="hover:text-text-primary transition-colors">Privacy Policy</a>
           </div>
         </div>
