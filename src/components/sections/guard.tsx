@@ -3,7 +3,7 @@ import { ShieldAlert, ShieldCheck, Info } from "lucide-react"
 
 export const Guard: React.FC = () => {
   return (
-    <section id="guard" className="py-16 md:py-24 border-t border-border-default/50 bg-bg-canvas transition-colors duration-200">
+    <section id="network-guard" className="py-16 md:py-24 border-t border-border-default/50 bg-bg-canvas transition-colors duration-200">
       <div className="container max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -37,7 +37,7 @@ export const Guard: React.FC = () => {
                 </div>
                 <div className="font-mono text-text-secondary space-y-1">
                   <p>Current public IP: <span className="text-text-primary">198.51.100.12</span></p>
-                  <p>Rule: Matches Blocked IP List (Insecure VPN / Public WiFi)</p>
+                  <p>Rule: Matches Blocked IP List (Insecure Connection / Public WiFi)</p>
                   <p>Decision: <span className="text-status-error font-semibold">Run Skipped</span></p>
                 </div>
               </div>

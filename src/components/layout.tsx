@@ -57,7 +57,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-text-secondary">
             <a href="#features" className="hover:text-text-primary transition-colors">Features</a>
             <a href="#cli" className="hover:text-text-primary transition-colors">CLI</a>
-            <a href="#guard" className="hover:text-text-primary transition-colors">Network Guard</a>
+            <a href="#network-guard" className="hover:text-text-primary transition-colors">Network Guard</a>
             <a href="#limits" className="hover:text-text-primary transition-colors">Limits</a>
             <a href="https://github.com/TaktAgents/takt" target="_blank" rel="noopener noreferrer" className="hover:text-text-primary transition-colors flex items-center gap-1">
               GitHub <ArrowUpRight className="w-3 h-3" />
